@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BASHMAKI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">BASHMAKI</div>
+    <nav class="nav">
+      <a href="#home">HOME</a>
+       <a href="#shop">SHOP</a>
+      <a href="#links">LINKS</a>
+    </nav>
+<button class="subscribe-btn" onclick="window.open('https://t.me/basshmaki')">SUBSCRIBE</button>
+  </header>
+
+  <main class="main" id="home">
+    <h1>Subscribe. Follow. Enjoy.</h1>
+    <p class="subtitle">Subscribe and learn more about our movements.</p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.postimg.cc/MpwNv73q/photo-2025-07-15-20-45-53.jpg" alt="Maksim Kirikov">
+        <div class="card-content">
+          <h2>Maksim Kirikov</h2>
+          <p>Founder of “Bashmaki”. Website developer. Graphic / web designer</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.postimg.cc/Pr5dPkCb/photo-2025-06-19-02-44-09.jpg" alt="Ivan Krylov">
+        <div class="card-content">
+          <h2>Ivan Krylov</h2>
+          <p>Founder of “Bashmaki”. Website developer.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.postimg.cc/MZrFmkP8/photo-2025-07-15-11-54-01.jpg" alt="Roman Rybak">
+        <div class="card-content">
+          <h2>Roman Rybak</h2>
+          <p>Founder of “Bashmaki”. The chill guy. Chief of posts at tg.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- Футболка поверх всех секций -->
+<section class="tshirt-section">
+  <div class="tshirt-wrapper">
+    <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt" class="tshirt-img">
+  </div>
+</section>
+
+
+  <script>
+    // Простой скрипт для работы выпадающих блоков
+    const headers = document.querySelectorAll(".accordion-header");
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("open");
+      });
+    });
+  </script>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <h2>Shop</h2>
+  <div class="shop-grid">
+    <!-- Карточка 1 -->
+    <div class="product-card">
+      <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt">
+      <div class="product-overlay">
+        <h3>Футболка</h3>
+        <p>Цена: 1990₽</p>
+         <button class="buy-btn" 
+          data-name="Футболка 2" 
+          data-material="Хлопок + Полиэстер" 
+          data-description="Спортивная футболка с лёгким материалом" 
+          data-image="shirt2.png">
+    Купить
+  </button>
+      </div>
+    </div>
+
+    <!-- Карточка 2 -->
+    <div class="product-card">
+      <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt">
+      <div class="product-overlay">
+        <h3>Футболка</h3>
+        <p>Цена: 1990₽</p>
+          <button class="buy-btn" 
+          data-name="Футболка 2" 
+          data-material="Хлопок + Полиэстер" 
+          data-description="Спортивная футболка с лёгким материалом" 
+          data-image="shirt2.png">
+    Купить
+  </button>
+      </div>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="product-card">
+      <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt">
+      <div class="product-overlay">
+        <h3>Футболка</h3>
+        <p>Цена: 1990₽</p>
+     <button class="buy-btn" 
+          data-name="Футболка 2" 
+          data-material="Хлопок + Полиэстер" 
+          data-description="Спортивная футболка с лёгким материалом" 
+          data-image="shirt2.png">
+    Купить
+  </button>
+      </div>
+    </div>
+
+    <!-- Карточка 4 -->
+    <div class="product-card">
+      <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt">
+      <div class="product-overlay">
+        <h3>Футболка</h3>
+        <p>Цена: 1990₽</p>
+       <button class="buy-btn" 
+          data-name="Футболка 2" 
+          data-material="Хлопок + Полиэстер" 
+          data-description="Спортивная футболка с лёгким материалом" 
+          data-image="shirt2.png">
+    Купить
+  </button>
+      </div>
+    </div>
+
+    <!-- Карточка 5 -->
+    <div class="product-card">
+      <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt">
+      <div class="product-overlay">
+        <h3>Футболка</h3>
+        <p>Цена: 1990₽</p>
+        <button class="buy-btn" 
+          data-name="Футболка 2" 
+          data-material="Хлопок + Полиэстер" 
+          data-description="Спортивная футболка с лёгким материалом" 
+          data-image="shirt2.png">
+    Купить
+  </button>
+      </div>
+    </div>
+
+    <!-- Карточка 6 -->
+    <div class="product-card">
+      <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="T-shirt">
+      <div class="product-overlay">
+        <h3>Футболка</h3>
+        <p>Цена: 1990₽</p>
+         <button class="buy-btn">Купить</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Новый блок LINKS -->
+  <section class="links" id="links">
+    <div class="links-grid">
+      <a href="https://t.me/basshmaki" target="_blank" class="link-btn">Telegram Channel — Bashmaki</a>
+      <a href="http://telegram.me/suwbmkdownfxsm" target="_blank" class="link-btn">Telegram Maksim</a>
+      <a href="http://telegram.me/soon_alpha" target="_blank" class="link-btn">Telegram Ivan</a>
+      <a href="http://telegram.me/Lurik11" target="_blank" class="link-btn">Telegram Roman</a>
+    </div>
+  </section>
+
+
+
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">BASHMAKI</div>
+        <p class="footer-tag">@basshmaki</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="http://telegram.me/suwbmkdownfxsm">Contact</a>
+        <a href="http://telegram.me/suwbmkdownfxsm">Support</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 BASHMAKI. Created with love.</p>
+    </div>
+  </footer>
+
+
+<!-- надпись -->
+<section class="graf-section">
+  <div class="graf-wrapper">
+    <img src="https://i.postimg.cc/K8cf6JsK/Vector.png" alt="graf" class="graf-img">
+  </div>
+</section>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie-consent" id="cookieConsent">
+  <div class="cookie-text">
+    Наш сайт использует куки.<br>
+    Продолжая им пользоваться, Вы соглашаетесь на обработку персональных данных в соответствии с
+    <a href="#">политикой конфиденциальности</a>.
+  </div>
+  <button id="cookieAcceptBtn" title="Принять">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M20.285 6.709a1 1 0 0 0-1.414-1.418l-9.192 9.186-4.243-4.244a1 1 0 0 0-1.414 1.414l4.95 4.95a1 1 0 0 0 1.414 0l9.899-9.888z"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  const cookieBox = document.getElementById('cookieConsent');
+  const cookieBtn = document.getElementById('cookieAcceptBtn');
+
+  // Проверяем, было ли уже одобрение
+  if (!localStorage.getItem('cookieAccepted')) {
+    cookieBox.classList.remove('hidden');
+  }
+
+  // При клике на галочку — скрываем и сохраняем состояние
+  cookieBtn.addEventListener('click', () => {
+    cookieBox.classList.add('hidden');
+    localStorage.setItem('cookieAccepted', 'true');
+  });
+</script>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="close-btn" id="closeModal">&times;</button>
+    <div class="modal-content">
+      <div class="modal-info">
+        <h2>Футболка 21</h2>
+        <p class="material">Материал<br><span>Хлопок 100%</span></p>
+        <p class="desc">Описание<br><span>Lorem ipsum dolor sit amet, qui blanditiis praesentium voluptatum deleniti atque corrupti!</span></p>
+
+        <p class="size-label">Выбрать размер</p>
+        <div class="sizes">
+          <button class="size">42</button>
+          <button class="size">43</button>
+          <button class="size">44</button>
+          <button class="size">45</button>
+          <button class="size">46</button>
+          <button class="size">47</button>
+        </div>
+
+        <p class="price">Цена<br><span>1990₽</span></p>
+        <button class="order-btn">Заказать</button>
+      </div>
+      <div class="modal-image">
+        <img src="https://i.postimg.cc/dQ92mG5Y/tsirth.png" alt="Футболка">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const buyButtons = document.querySelectorAll('.buy-btn');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const closeModal = document.getElementById('closeModal');
+  const sizes = document.querySelectorAll('.size');
+
+  // функция открытия модалки
+  const openPopup = () => {
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // 🚫 блокируем скролл
+  };
+
+  // функция закрытия модалки
+  const closePopup = () => {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // ✅ возвращаем скролл
+  };
+
+  // навешиваем обработчик на каждую кнопку "Купить"
+  buyButtons.forEach(btn => {
+    btn.addEventListener('click', openPopup);
+  });
+
+  // закрытие по крестику
+  closeModal.addEventListener('click', closePopup);
+
+  // закрытие по клику вне окна
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closePopup();
+  });
+
+  // выбор размера
+  sizes.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sizes.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+
+
+</body>
+</html>

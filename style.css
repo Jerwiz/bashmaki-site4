@@ -1,0 +1,736 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  position: fixed;          /* фиксирует хедер сверху */
+  top: 0;                   /* прикреплён к верхнему краю */
+  left: 0;
+  width: 100%;              /* занимает всю ширину экрана */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: rgba(7, 7, 7, 0.85); /* полупрозрачный фон, чтобы текст читался поверх контента */
+  backdrop-filter: blur(6px);            /* эффект размытия под хедером */
+  z-index: 9999;             /* поверх всех других блоков */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 13px;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.subscribe-btn {
+  background-color: #009eff;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.main {
+  text-align: left;
+  padding: 140px 60px 60px; /* добавляем сверху отступ под хедер */
+}
+
+
+.main h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 60px;
+}
+
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* горизонтальный отступ между карточками */
+  
+}
+
+.card {
+  background-color: #000000;
+  color: #6e6e6e;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+}
+
+/* Адаптация для планшетов и телефонов */
+@media (max-width: 1000px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr); /* два в ряд */
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-grid {
+    grid-template-columns: 1fr; /* одна карточка в ряд */
+  }
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card-content p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+
+/* ====== LINKS ====== */
+.links {
+  padding: 80px 60px;
+}
+
+.links h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.link-btn {
+  display: inline-block;
+  background-color: #111;
+  border-radius: 10px;
+  color: #fff;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+  min-width: 220px;
+}
+
+.link-btn:hover {
+  background-color: #009eff;
+  border-color: #009eff;
+  color: #fff;
+
+}
+
+
+/* ====== T-SHIRT SECTION (фиксируется в макете) ====== */
+.tshirt-section {
+  position: absolute;
+  top: 150px;         /* ← выстави вручную, чтобы точно совпадало с местом между блоками */
+  right: 8%;
+  z-index: 10;
+  width: 700px;
+  pointer-events: none; /* не мешает кликам */
+}
+
+.tshirt-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tshirt-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.tshirt-img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* Скрыть на телефонах */
+@media (max-width: 900px) {
+  .tshirt-section {
+    display: none;
+  }
+}
+
+
+/* ====== FOOTER ====== */
+.footer {
+  background-color: #0a0a0a;
+  padding: 60px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.footer-tag {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-right a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #009eff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* ====== SHOP ====== */
+.shop {
+  padding: 230px 60px;
+}
+
+.shop h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* три карточки в ряд */
+  gap: 24px;
+  row-gap: 40px; /* отступ между рядами */
+}
+
+/* Адаптация для планшетов и телефонов */
+@media (max-width: 1000px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr); /* два в ряд */
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-grid {
+    grid-template-columns: 1fr; /* одна карточка в ряд */
+  }
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #111;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Оверлей при наведении */
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  padding: 20px;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-overlay h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.product-overlay p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.product-card .buy-btn {
+  background: #0094ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card .buy-btn:hover {
+  background: #00b7ff;
+}
+/* ====== КАСТОМНЫЙ СКРОЛЛ ====== */
+
+/* Для Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;               /* ширина вертикального скролла */
+  height: 8px;              /* высота горизонтального (если появится) */
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;      /* фон "дорожки" */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #009eff; /* цвет "ползунка" */
+  border-radius: 10px;
+  border: 2px solid #0a0a0a; /* делает внутреннюю тень */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00baff; /* при наведении */
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin;            /* тонкий скролл */
+  scrollbar-color: #009eff #0a0a0a; /* ползунок / фон */
+}
+
+/* ====== надпись (фиксируется в макете) ====== */
+.graf-section {
+  position: absolute;
+  top: 2270px;         /* ← выстави вручную, чтобы точно совпадало с местом между блоками */
+  right: 38%;
+  z-index: 10;
+  width: 500px;
+  pointer-events: none; /* не мешает кликам */
+}
+
+.graf-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graf-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.graf-img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* Скрыть на телефонах */
+@media (max-width: 800px) {
+  .graf-section {
+    display: none;
+  }
+}
+
+/* Cookie consent box */
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  left: 38%;
+  right: 38%;
+  max-width: 420px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cookie-text {
+  line-height: 1.4;
+  margin-right: 10px;
+}
+
+.cookie-consent a {
+  color: #4fa8ff;
+  text-decoration: none;
+}
+
+.cookie-consent a:hover {
+  text-decoration: underline;
+}
+
+.cookie-consent button {
+  background: #007bff;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.cookie-consent button:hover {
+  background: #0099ff;
+}
+
+.cookie-consent svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+/* --- Базовый стиль (для десктопа остаётся как был) --- */
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  left: 38%;
+  right: 20px;
+  max-width: 420px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  line-height: 1.4;
+}
+
+/* --- Мобильная адаптация --- */
+@media (max-width: 600px) {
+  .cookie-consent {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    max-width: none;
+  }
+
+  .cookie-text {
+    margin-bottom: 12px;
+  }
+
+  .cookie-consent button {
+    align-self: flex-end;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  .cookie-consent svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* --- Анимации (fade + slide) --- */
+.cookie-consent {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cookieFadeIn 0.6s ease forwards;
+}
+
+.hidden {
+  animation: cookieFadeOut 0.4s ease forwards;
+}
+
+@keyframes cookieFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookieFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+
+/* ===== МОДАЛЬНОЕ ОКНО ===== */
+.modal-overlay {
+
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 900px;
+  position: relative;
+  animation: modalIn 0.4s ease forwards;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ВНУТРЕННОЕ СОДЕРЖИМОЕ ===== */
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.modal-info {
+  flex: 1 1 45%;
+}
+
+.modal-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-info p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.modal-info span {
+  color: #fff;
+  font-weight: 500;
+}
+
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.size {
+  background: #2a2a2a;
+  color: #ccc;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.size.active {
+  background: #0094ff;
+  color: #fff;
+}
+
+.size:hover {
+  background: #333;
+}
+
+.order-btn {
+  width: 100%;
+  background: #0094ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #00b7ff;
+}
+
+.modal-image img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* КНОПКА ЗАКРЫТИЯ */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-info {
+    width: 100%;
+  }
+
+  .modal-image img {
+    max-width: 220px;
+  }
+}
